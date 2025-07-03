@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Poem Generator - Craft Poetic Masterpieces</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* A very dark gray for the background */
+        }
+        /* Styling for the background SVG to create a subtle, dynamic feel */
+        .background-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        /* Button gradient and hover effect */
+        .cta-button {
+            background: linear-gradient(90deg, #8B5CF6, #EC4899);
+            transition: all 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3), 0 6px 6px rgba(236, 72, 153, 0.3);
+        }
+        /* Add a subtle animation for text content */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Background SVG decoration -->
+    <div class="background-wrapper">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"></stop><stop offset="100%" stop-color="#0a0a0a"></stop></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"></rect><g opacity="0.1"><circle fill="#8B5CF6" cx="50%" cy="50%" r="400"></circle><circle fill="#EC4899" cx="20%" cy="80%" r="300"></circle><circle fill="#3B82F6" cx="90%" cy="30%" r="350"></circle></g></svg>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-10">
+
+        <!-- Header/Navigation -->
+        <header class="absolute top-0 left-0 right-0 p-6">
+            <div class="flex justify-between items-center max-w-6xl mx-auto">
+                <h1 class="text-2xl font-bold text-white">PoemAI</h1>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Features</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Showcase</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">About</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="text-center py-20">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4 fade-in-up">
+                Unleash Your Inner Poet with <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Artificial Intelligence</span>
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 mb-8 fade-in-up delay-1">
+                Our advanced AI transforms your thoughts and ideas into beautiful, evocative poems in seconds. Whether you're a seasoned poet or just starting, discover a new universe of creativity.
+            </p>
+            <a href="https://aipoemgenerator.us/" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="cta-button inline-block text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg fade-in-up delay-2">
+                Try AI Poem Generator
+            </a>
+        </main>
+
+        <!-- Features Section -->
+        <section class="w-full max-w-6xl mx-auto py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Feature 1 -->
+                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 fade-in-up delay-1">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-500/20 mb-4">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536l12.232-12.232z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Multiple Poetic Styles</h3>
+                    <p class="text-gray-400">From sonnets and haikus to free verse, our AI understands various poetic forms to match your desired style.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 fade-in-up delay-2">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-pink-500/20 mb-4">
+                        <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Instant Creation</h3>
+                    <p class="text-gray-400">No more writer's block. Generate unique poems in an instant, providing you with endless inspiration on demand.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 fade-in-up delay-3">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500/20 mb-4">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Intelligent Suggestions</h3>
+                    <p class="text-gray-400">Refine your creations with AI-powered suggestions for wording, rhythm, and imagery to perfect your masterpiece.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-6xl mx-auto py-8 mt-16 border-t border-gray-800">
+            <p class="text-center text-gray-500">&copy; 2024 PoemAI. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
